@@ -6,6 +6,14 @@ param adminUsername string = 'azureuser'
 param adminPassword string
 param subnetId string
 
+var publisher = 'MicrosoftWindowsServer'
+var offer = 'WindowsServer'
+var sku = '2022-Datacenter'
+var version = 'latest'
+
+resource vmImage 'Microsoft.Compute/images@2021-04-01' existing = {
+  name: '${publisher}:${offer}:${sku}:${version}'
+}
 
 module vmss './vmss.bicep' = {
   name: 'vmssDeployment'
