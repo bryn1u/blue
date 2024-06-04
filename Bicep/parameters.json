@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmssName": {
+      "value": "myVMSS"
+    },
+    "location": {
+      "value": "westeurope"
+    },
+    "skuName": {
+      "value": "Standard_D2s_v3"
+    },
+    "instanceCount": {
+      "value": 2
+    },
+    "adminUsername": {
+      "value": "azureuser"
+    },
+    "adminPassword": {
+      "value": "P@ssw0rd1234"
+    },
+    "subscriptionId": {
+      "value": "9d32575f-c86b-4585-b037-34c83be4925b"
+    },
+    "resourceGroupId": {
+      "value": "rg-image-builder"
+    },
+    "virtualNetworkName": {
+      "value": "vnet-dev-image-builder"
+    },
+    "subnetName": {
+      "value": "subnet-1-image-builder"
+    },
+    "osDiskCreateOption": {
+      "value": "FromImage"
+    },
+    "scriptUri": {
+      "value": "https://builderimage.blob.core.windows.net/scripts/ps1.ps1"
+    },
+    // "scriptUriSasToken": {
+    //   "value": ""
+    // },
+    "managedIdentityName": {
+      "value": "imVMSSstorageAccount"
+    }
+  }
+}
+
